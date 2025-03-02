@@ -31,4 +31,5 @@ The program divides complex financial analysis into specialized tasks handled by
     - Uses specialized search tools to find relevant information.
 - **Advisor Agent**: Processes the research data to generate actionable market advice and investment predictions.
     - Analyzes the research data.
-    - Generates actionable investment strategies and market advice based on the gathered information.
+    - Generates actionable investment judgements and market advice based on the gathered information.
+<img width="1779" alt="page" src="https://github.com/user-attachments/assets/0b78a6e6-8953-49ad-9e9b-b9ae9b90e1b1" />

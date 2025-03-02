@@ -4,8 +4,8 @@ A multi-agent system that gathers market data and research insights to generate 
 
 - **LangChain** – For chaining language model operations.
 - **LangGraph** – library to create a robust, multi-agent workflow.
-- **OpenAI API** – Powers the agents with an LLM
-- **Tavily Search API** – For fetching financial market data.
+- **[OpenAI API](https://openai.com/api/)** – Powers the agents with an LLM
+- **[Tavily Search API](https://tavily.com/)** – For fetching financial market data.
 
 ## Running
 First, clone the repository and create a virtual environment
@@ -15,6 +15,12 @@ pip install -r requirements.txt
 Run the Streamlit web app
 ```shell
 streamlit run framework.py
+```
+
+(Optional) Changing LLM: [Available Models](https://platform.openai.com/docs/models)
+```python
+# Change model here
+llm = ChatOpenAI(model="gpt-4o-mini")
 ```
 
 ## Overview

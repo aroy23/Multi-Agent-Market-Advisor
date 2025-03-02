@@ -147,7 +147,7 @@ with col1:
             st.write("No final answer was produced.")
         
         with col2:
-            with st.expander("Response Flow", expanded=False):
+            with st.expander("Response Flow", expanded=True):
                 depiction = ""
                 for i, step in enumerate(flow):
                     if i < len(flow)-1:

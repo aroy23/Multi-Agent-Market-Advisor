@@ -7,6 +7,8 @@ A multi-agent system that gathers market data and research insights to generate 
 - **[OpenAI API](https://openai.com/api/)** – Powers the agents with an LLM
 - **[Tavily Search API](https://tavily.com/)** – For fetching financial market data.
 
+Deployed at: https://multi-agent-market-advisor.streamlit.app/
+
 ## Running
 First, clone the repository and create a virtual environment
 ```shell

@@ -103,7 +103,7 @@ with col2:
 
 flow = []
 with col1:
-    st.title("Multi Agent Market Advisor")
+    st.title("Multi-Agent Market Advisor")
     st.write("Enter your prompt below and see the resulting financial insights.")
 
     user_prompt = st.text_input(

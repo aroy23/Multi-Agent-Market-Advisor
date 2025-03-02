@@ -6,7 +6,6 @@ from langchain_core.messages import BaseMessage, HumanMessage
 from langgraph.prebuilt import create_react_agent
 from langgraph.graph import MessagesState, END
 from langgraph.graph import StateGraph, START
-from IPython.display import Image, display
 from langchain_openai import ChatOpenAI
 from langgraph.types import Command
 from typing import Literal

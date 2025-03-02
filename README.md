@@ -1,8 +1,11 @@
-# Multi Agent Financial Tasker
+# Multi Agent Market Advisor
 
 A multi-agent system that gathers market data and research insights to generate investment predictions or market advice. <br>
 
-This system leverages the LangGraph library to create a robust, multi-agent workflow.
+- **LangChain** – For chaining language model operations.
+- **LangGraph** – library to create a robust, multi-agent workflow.
+- **OpenAI API** – Powers the agents with an LLM
+- **Tavily Search API** – For fetching financial market data.
 
 ## Overview
 
@@ -13,10 +16,3 @@ The program divides complex financial analysis into specialized tasks handled by
 - **Investment Advisor Agent**: Processes the research data to generate actionable investment predictions and market advice.
     - Analyzes the research data.
     - Generates actionable investment strategies and market advice based on the gathered information.
-
-## Implementation
-
-The multi-agent system is implemented using:
-- **LangGraph**: To design and manage the multi-agent workflow.
-- **LangChain**: To connect language model tasks and prompts.
-- **An LLM** (In my case, OpenAI's GPT-4o): Powers the specialized agents for natural language understanding and generation.

@@ -21,7 +21,6 @@ if openai_api_key:
 if tavily_api_key:
     os.environ["TAVILY_API_KEY"] = tavily_api_key
 
-# Check if keys are provided; if not, warn the user.
 if not openai_api_key or not tavily_api_key:
     st.warning("Please enter your API keys in the sidebar to continue.")
     st.stop()
@@ -39,6 +38,7 @@ def make_system_prompt(suffix: str) -> str:
         f"\n{suffix}"
     )
 
+# Change model here
 llm = ChatOpenAI(model="gpt-4o-mini")
 
 def get_next_node(last_message: BaseMessage, goto: str):
@@ -59,7 +59,6 @@ research_agent = create_react_agent(
 def research_node(state: MessagesState) -> Command[Literal["investment_advisor", END]]:
     result = research_agent.invoke(state)
     goto = get_next_node(result["messages"][-1], "investment_advisor")
-    # Ensure the last message is wrapped as a HumanMessage for consistency
     result["messages"][-1] = HumanMessage(content=result["messages"][-1].content, name="researcher")
     return Command(
         update={"messages": result["messages"]},
@@ -68,7 +67,7 @@ def research_node(state: MessagesState) -> Command[Literal["investment_advisor",
 
 investment_agent = create_react_agent(
     llm,
-    tools=[],  # No additional tools required for now
+    tools=[],
     prompt=make_system_prompt(
         "You can only generate investment predictions and market advice based on the research data provided. "
         "Support your advice with quantitative metrics like stock price percent changes, key ratios, and other relevant data."
@@ -157,4 +156,3 @@ with col1:
                     else:
                         depiction += step
                 st.write(depiction)
-
